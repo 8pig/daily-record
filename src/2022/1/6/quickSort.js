@@ -8,7 +8,7 @@ Array.prototype.quick = function (){
     const right = []
     const mind = arr[0]
     for (let index = 1; index < arr.length; index++) {
-      if (arr[0] > arr[index]) {
+      if (mind > arr[index]) {
         left.push(arr[index]);
       } else {
         right.push(arr[index])
