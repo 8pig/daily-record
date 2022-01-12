@@ -14,3 +14,4 @@ Promise.all([p(0, 2000), p(1, 1000)]).then(res => {
 }).catch(e => {
   console.log(e);
 })
+
