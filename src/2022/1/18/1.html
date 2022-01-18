@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="t1">
+  <button>debunce</button>
+  <input type="text" id="t2">
+  <script>
+    const demo = function (){
+      console.log(111);
+      console.log(this);
+    }
+    document.getElementById("t1").addEventListener('input', debunce(demo, 2000))
+    document.getElementById("t2").addEventListener('input', throttle(demo, 1000))
+    function debunce(fn, wait){
+      let timer = null;
+      
+      return args => {
+        if(timer){
+          clearTimeout(timer);
+        }
+        timer = setTimeout(fn, wait);
+      }
+    }
+
+    function throttle(event, time) {
+      let timer = null;
+      return function () {
+        if(!timer) {
+          timer = setTimeout(() => {
+            event();
+            timer = null;
+          }, time);
+        }
+      }
+
+    }
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自然拼读-发音练习</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<!-- loading -->
+<div id="loading">
+    <div class="loadEffect" id="loadEffect"></div>
+    <p id="lodingnum">0%</p>
+</div>
+
+<audio preload="load" id="audio1" src="" style="display:none;"></audio>
+<audio preload="load" id="audio2" src="" style="display:none;"></audio>
+
+<!-- homePage -->
+<div class="page home-page">
+    <h1>Part 2</h1>
+    <p>听音</p>
+    <p>发音练习</p>
+    <em></em>
+    <h6 id="btnPlay"><span>开始</span></h6>
+</div>
+<!-- /homePage -->
+<!-- content -->
+<div class="page content" id="content">
+    <h2>选择正确答案</h2>
+    <h4 class="horn"><em></em></h4>
+    <div class="option option01">
+        <p data-judge="1">a</p>
+        <p data-judge="0">e</p>
+        <p data-judge="0">i<p>
+    </div>
+    <div class="option option02">
+        <p data-judge="0">a</p>
+        <p data-judge="1">e</p>
+        <p data-judge="0">i</p>
+    </div>
+    <div class="option option03">
+        <p data-judge="0">a</p>
+        <p data-judge="0">e</p>
+        <p data-judge="1">i</p>
+    </div>
+</div>
+<!-- /content -->
+<!-- answer -->
+<div class="page answer" id="answer">
+    <h2 class="text">[sad]</h2>
+    <p>sad</p>
+    <h2 class="text">[bed]</h2>
+    <p>bed</p>
+    <h2 class="text">[kit]</h2>
+    <p>kit</p>
+</div>
+<!-- answer -->
+
+<script src="https://s0.babyfs.cn/m/template/common/jquery.min.js"></script>
+<script src="https://s0.babyfs.cn/m/template/common/jquery.imgpreload.min.js"></script>
+<script src="js/currency.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
