@@ -337,6 +337,9 @@ html, body {
 
 /* add styles */
 @media screen and (min-width:1000px) {
+    #content {
+        height:1200px;
+    }
 
     .horn {
         top: 1rem;
