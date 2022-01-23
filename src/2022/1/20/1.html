@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="inp">
+  <p id="p"></p>
+  <script>
+    const obj = {name: ''}
+    Object.defineProperty(obj, 'name' ,{
+      set(v) {
+          console.log('设置');
+          document.getElementById('p').innerText =  v
+      },
+      get() {
+          console.log('get');
+         
+      }
+    })
+    document.getElementById('inp').addEventListener('input', (e) => {
+      console.log(e.target);
+      obj.name = e.target.value;
+    }, false)
+
+
+
+  </script>
+</body>
+</html>
