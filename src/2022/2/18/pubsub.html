@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button>click</button>
+
+<script>
+    function Event () {
+        this.handles = {}
+
+    }
+    Event.prototype.on = function (type, fn) {
+        if(!this.handles[type]){
+            this.handles[type] = []
+        }
+        this.handles[type].push(fn);
+
+    }
+
+    Event.prototype.emit = function (type, data) {
+        let list = this.handles[type]
+        list.forEach(item => {
+            item(data)
+        })
+
+    }
+    let ev = new Event();
+    ev.on('add', (data) => {
+        console.log(data);
+    });
+    setTimeout(() => {
+        ev.emit('add', 'adada')
+    }, 1000)
+
+
+
+
+</script>
+</body>
+</html>
